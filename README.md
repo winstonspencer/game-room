@@ -23,4 +23,4 @@ To run this application simple navigate to the project directory and execute the
      ```
 
 ## Class UML Diagram
-     ![alt Week 2 Class Diagram](Week-2_Class-Diagram.png)
+![alt Week 2 Class Diagram](images/Week-2_Class-Diagram.png)
