@@ -6,10 +6,21 @@
 
 ## How to build the application
 To build this application:
-1. Download the project from maven: `git clone https://github.com/winstonspencer/game-room.git`
+1. Download the project from maven:
+   ```shell
+     git clone https://github.com/winstonspencer/game-room.git
+   ```
+   
 2. Navigate to the project directory and execute the following command:
-     `./mvnw clean install`
+   ```shell
+     ./mvnw clean install
+   ```
 
 ## How to run the application
 To run this application simple navigate to the project directory and execute the following command:
-     `./mvnw spring-boot:run`
+     ```shell
+          ./mvnw spring-boot:run
+     ```
+
+## Class UML Diagram
+     ![alt Week 2 Class Diagram](Week-2_Class-Diagram.png)
