@@ -22,6 +22,16 @@ public class GameService {
     private static long nextGameId = 1;
 
     /*
+     * Holds the next game identifier
+     */
+    private static long nextPlayerId = 1;
+
+    /*
+     * Holds the next game identifier
+     */
+    private static long nextTeamId = 1;
+
+    /*
      * Holds the single instance of the <code>GameService</code> object.
      */
     private static final GameService gameService = new GameService();
@@ -163,6 +173,24 @@ public class GameService {
      */
     public int getGameCount() {
         return games.size();
+    }
+
+    /**
+     * Gets the next player identifier
+     *
+     * @return the next player identifier
+     */
+    public long getNextPlayerId(){
+        return nextPlayerId++;
+    }
+
+    /**
+     * Gets the next team identifier
+     *
+     * @return the next team identifier
+     */
+    public long getNextTeamId(){
+        return nextTeamId++;
     }
 
     /**

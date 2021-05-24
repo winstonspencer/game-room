@@ -1,5 +1,7 @@
 package com.gameroom;
 
+import java.util.List;
+
 /**
  * A simple class to hold information about a game
  * 
@@ -14,43 +16,41 @@ package com.gameroom;
  * @author coce@snhu.edu
  *
  */
-public class Game {
-	long id;
-	String name;
-	
-	/**
-	 * Hide the default constructor to prevent creating empty instances.
-	 */
-	private Game() {
-	}
+public class Game extends Entity{
+
+	private List<Team> teams;
 
 	/**
-	 * Constructor with an identifier and name
+	 * The Game constructor creates a new <code>Game</code> object
+	 * with the specified id and name.
+	 *
+	 * @param id The player ID
+	 * @param name The player name.
 	 */
 	public Game(long id, String name) {
-		this();
-		this.id = id;
-		this.name = name;
+		super(id, name);
 	}
 
 	/**
-	 * @return the id
+	 * Adds a new <code>Team</code> to the list of teams.
+	 *
+	 * @param name the team name.
+	 * @return the newly added team.
 	 */
-	public long getId() {
-		return id;
+	public Team addTeam(String name) {
+		final Team t = new Team(GameService.getInstance().getNextTeamId(), name);
+		this.teams.add(t);
+		return t;
 	}
+
 
 	/**
-	 * @return the name
+	 * The string representation of the <code>Game</code> object.
+	 * @return the string representation of the <code>Game</code> object.
 	 */
-	public String getName() {
-		return name;
-	}
-
 	@Override
-	public String toString() {
-		
-		return "Game [id=" + id + ", name=" + name + "]";
+	public String toString(){
+		return super.toString();
 	}
 
 }

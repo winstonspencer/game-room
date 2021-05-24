@@ -9,37 +9,29 @@ package com.gameroom;
  * these values cannot be changed once a player is
  * created.
  * </p>
- * @author coce@snhu.edu
  *
+ * @author coce@snhu.edu
  */
-public class Player {
-	long id;
-	String name;
-	
-	/*
-	 * Constructor with an identifier and name
-	 */
-	public Player(long id, String name) {
-		this.id = id;
-		this.name = name;
-	}
+public class Player extends Entity {
 
-	/**
-	 * @return the id
-	 */
-	public long getId() {
-		return id;
-	}
+    /**
+     * The Player constructor creates a new <code>Player</code> object
+     * with the specified id and name.
+     *
+     * @param id The player ID
+     * @param name The player name.
+     */
+    public Player(long id, String name) {
+        super(id, name);
+    }
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	@Override
-	public String toString() {
-		return "Player [id=" + id + ", name=" + name + "]";
-	}
+    /**
+     * The string representation of the <code>Player</code> object.
+     *
+     * @return the string representation of the <code>Player</code> object
+     */
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
