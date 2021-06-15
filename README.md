@@ -18,7 +18,7 @@
 #### Technique and Strategies
     When designing the software it is best to start with the requrements.  From there I created a the high level architecture diagram and the details for each section of the diagram.  The the requirements and diagrams have been created and review, the coding is trivial.
 
-### Prerequisites
+## Prerequisites
     This application requires maven. https://maven.apache.org/install.html
 
 ## How to build the application
